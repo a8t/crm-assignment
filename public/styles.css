@@ -1,63 +1,71 @@
-body {
+* {
+  font-family: Helvetica;
+    box-sizing: border-box;
+}
+
+header {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: 30px
+}
 
+.bm {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 50px;
+}
+
+
+.menu {
+  text-align: center;
+  padding-left: 0px;
+}
+
+
+
+.menu > li {
+
+  margin: 2px;
+  background-color: #ccc;
+  padding: 10px;
+  font-weight: bold;
+  color: white;
+  width: 100%;
+}
+
+.bitmaker {
+  text-align: center;
+  background-color: #666;
+  color: white;
+  clear:both;
+  padding: 10px;
+  width: 1000px;
+  margin: auto;
 }
 
 .contact {
-  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+}
+
+.contact * {
+  width: 80%;
+}
+
+.contact p {
+  background-color: #FE8171;
+  padding: 10px;
 }
 
 .block {
-  background-color: #DDD;
-  padding: 20px 0px;
-  margin: 10px;
-  border-radius: 9px;
-  width: 300px;
-
+  background-color: #2AE0D0;
+  font-weight: bold;
+  padding:4px;
+  margin: 2px
 }
 
 .block li {
   list-style: none;
-}
-
-.navbar-inverse {
-    background-color: #4C656C;
-    font-family: 'Nunito Sans', sans-serif;
-}
-
-.navbar .nav > li > a {
-    color:  #ddd;
-}
-
-.navbar .txt {
-    color:  #eee;
-}
-
-
-.jumbotron{
-    margin:auto;
-    margin-top:70px;
-    margin-bottom:70px;
-    max-width:50em;
-    font-family: 'Nunito Sans', sans-serif;
-
-}
-
-h1.title {
-    font-weight:500;
-    margin-top: -10px;
-    font-size:6vw;
-    text-align: center;
-}
-
-.img-responsive {
-
-}
-
-p.text {
-    font-size:3.0vw;
 }
