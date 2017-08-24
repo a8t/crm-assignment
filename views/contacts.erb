@@ -6,7 +6,9 @@
 
     <div class="block"><ul>
       <li><%= each.full_name.titlecase%> (<%= each.email%>)
-      <li >Notes: <%= each.note%></li>
+      <li>
+        <a href=<%= "contacts/"+each.id.to_s %>> More info.</a>
+      </li>
     </ul></div>
 
   <% end %>

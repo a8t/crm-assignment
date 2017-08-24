@@ -18,16 +18,21 @@ end
 #   erb(:gallery)
 # end
 #
-# get "/about_me" do
-#   @skills = ["HTML/CSS", "Javascript", "Ruby"]
-#   @interests = ["bikes", "tetris","physics"]
-#   erb(:about_me)
-# end
-#
-# get "/fav_links" do
-#   @favourites = ["google.com", "reddit.com","facebook.com"]
-#   erb(:fav_links)
-# end
+get "/about" do
+  @skills = ["HTML/CSS", "Javascript", "Ruby"]
+  @interests = ["bikes", "tetris","physics"]
+  erb(:about)
+end
+
+get '/contacts/:id' do
+  @contact = Contact.find_by({id: params[:id].to_i})
+
+  if @contact
+  erb :show_contact
+else
+  erb :error
+end
+end
 
 after do
   ActiveRecord::Base.connection.close

@@ -52,6 +52,7 @@ header {
 
 .contact * {
   width: 80%;
+  border-radius: 3px;
 }
 
 .contact p {
@@ -63,7 +64,8 @@ header {
   background-color: #2AE0D0;
   font-weight: bold;
   padding:4px;
-  margin: 2px
+  margin: 2px;
+
 }
 
 .block li {
