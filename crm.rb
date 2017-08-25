@@ -9,15 +9,11 @@ get "/contacts" do
   @collection = Contact.all
   erb(:contacts)
 end
-#
-# get "/portfolio" do
-#   erb(:gallery)
-# end
-#
-# get "/gallery" do
-#   erb(:gallery)
-# end
-#
+
+get "/contacts/new" do
+  erb(:new)
+end
+
 get "/about" do
   @skills = ["HTML/CSS", "Javascript", "Ruby"]
   @interests = ["bikes", "tetris","physics"]
