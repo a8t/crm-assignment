@@ -2,7 +2,7 @@ require "sinatra"
 require "./contact.rb"
 
 get "/" do
-  erb(:index)
+  erb(:main)
 end
 
 get "/contacts" do

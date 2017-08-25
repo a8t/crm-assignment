@@ -33,6 +33,9 @@ header {
   width: 100%;
 }
 
+main {
+  margin-top: 80px;
+}
 .bitmaker {
   text-align: center;
   background-color: #666;
