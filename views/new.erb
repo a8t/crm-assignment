@@ -1,1 +1,28 @@
-Add a new contact
+
+<div class="contact-form">
+<form action='/contacts' method='post'>
+  <h1>Add a new contact</h1>
+
+  <label for="first_name">
+    <span>First name:</span>
+    <input id="first_name" type='text' name='first_name'>
+  </label>
+
+  <label for="last_name">
+    <span>Last name:</span>
+    <input id="last_name" type='text' name='last_name'>
+  </label>
+
+  <label for="email">
+    <span>Email:</span>
+    <input id="email" type='text' name='email'>
+  </label>
+
+  <label for="note">
+    <span>Note:</span>
+    <textarea id="note" name='note'></textarea>
+  </label>
+
+  <input class="btn-primary" type='submit' value='New Contact'>
+</form>
+</div>

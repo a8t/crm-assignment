@@ -1,15 +1,37 @@
 <div class="contact">
 
-  <p>There are <%= @collection.size %> contacts.</p>
+  <p>There are <%= @collection.size %> contacts. </p>
+  <p><a href="/contacts/new">Click here to add a new one.</a></p>
+
+
+  <div class="search">
+    <form action='/contacts/' method='post'>
+      <span>Search by:</span>
+
+      <select name="search_by">
+        <option value="first_name">First name</option>
+        <option value="last_name">Last name</option>
+        <option value="email">Email</option>
+      </select>
+
+      <input type="text" name="search_value" placeholder="Contact attribute">
+
+      <input class="btn-primary" type='submit' value='Search'>
+    </form>
+  </div>
+
 
   <% @collection.each do |each| %>
 
-    <div class="block"><ul>
-      <li><%= each.full_name.titlecase%> (<%= each.email%>)
-      <li>
-        <a href=<%= "contacts/"+each.id.to_s %>> More info.</a>
-      </li>
-    </ul></div>
+    <div class="block2" >
+      <a href=<%= "contacts/"+each.id.to_s %>>
+        <ul>
+          <li><%= each.full_name.titlecase%> (<%= each.email%>)
+          <li>Click to see more info, edit, or delete.</li>
+        </ul>
+      </a>
+  </div>
+
 
   <% end %>
 </div>

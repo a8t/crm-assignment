@@ -1,4 +1,3 @@
-
 <div class="contact">
   <p><%= @contact.full_name.titlecase %></p>
   <div class= "block">
@@ -6,5 +5,24 @@
       <li>Email: <%= @contact.email %></li>
       <li>Notes: <%= @contact.note %></li>
     </ul>
+
+    <form action="/contacts/<%= @contact.id%>/edit">
+      <input class="btn-primary" type="submit" value="Edit Contact">
+    </form>
+
+    <form action="/contacts/<%=@contact.id%>" method="post">
+      <input type='hidden' name='_method' value='delete'>
+      <input class="btn-primary" type="submit" value="Delete Contact">
+    </form>
+
   </div>
+
+  <div class= "block">
+
+    <form action="/contacts" method="get">
+      <input class="btn-primary" type="submit" value="Back to contacts">
+    </form>
+
+  </div>
+
 </div>
